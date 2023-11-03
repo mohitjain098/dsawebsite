@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+                int main()
+{
+	int i,j;
+	int arr[6];
+	clrscr();
+	printf("Enter the values:");
+	for(i=0;i<6;i++)
+	{
+	scanf("%d",&arr[i]);
+	}
+	printf("Duplicate values are:\n");
+	for(i=0;i<6;i++)
+	{
+	  for(j=i+1;j<6;j++)
+	  {
+		if(arr[i]==arr[j])
+		{
+		printf("%d\n",arr[i]);
+		}
+	  }
+	}
+	getch();
+	return 0;
+}
+            </pre>
+            <h1>output</h1>
+            <pre>
+                Enter the values:
+                1 2 3 4 4 5
+                Duplicate values are:
+                4
+            </pre>
+</body>
+</html>

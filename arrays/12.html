@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+        #include <stdio.h>
+
+            #define MAX_SIZE 100
+            
+            int main() {
+                int arr[MAX_SIZE];
+                int frequency[MAX_SIZE];
+                int i, j, size;
+            
+                printf("Enter the elements of the array (maximum 100 elements, enter -1 to stop):\n");
+                size = 0;
+                int input;
+                do {
+                    scanf("%d", &input);
+                    if (input != -1) {
+                        arr[size] = input;
+                        size++;
+                    }
+                } while (input != -1 && size < MAX_SIZE);
+                for (i = 0; i < size; i++) {
+                    frequency[i] = 1;
+                }
+                for (i = 0; i < size; i++) {
+                    for (j = i + 1; j < size; j++) {
+                        if (arr[i] == arr[j]) {
+                            frequency[j] = 0;
+                        }
+                    }
+                }
+                printf("\nArray with duplicates removed and replaced by zero:\n");
+                for (i = 0; i < size; i++) {
+                    if (frequency[i] != 0) {
+                        printf("%d ", arr[i]);
+                    } else {
+                        printf("0 ");
+                    }
+                }
+            
+                return 0;
+            }
+            
+            </pre>
+            <h1>output</h1>
+            <pre>Enter the elements of the array (maximum 100 elements, enter -1 to stop):
+                1 2 3 3 4 5 6
+                Array with duplicates removed and replaced by zero:
+                1 2 3 0 4 5 6
+
+            </pre>
+</body>
+</html>

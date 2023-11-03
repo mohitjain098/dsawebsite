@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+
+                    int* merge(int arr1[], int s1, int arr2[], int s2, int arr[], int size){
+                        int i = 0, j = 0, k = 0;
+                        while (k < size)
+                        {
+                            if ((arr1[i] < arr2[j] || j == s2) && i != s1){
+                                arr[k] = arr1[i];
+                                k++;
+                                i++;
+                            }
+                            else{
+                                arr[k] = arr2[j];
+                                k++;
+                                j++;
+                            }
+                        }
+                        return arr;
+                    }
+                    
+                    int main(){
+                        int arr1[5], arr2[5], arr[10],i;
+                        printf("Enter First Array\n");
+                        for (i = 0; i < 5; i++)
+                        {
+                            printf("Enter Value of position %d\n", i+1);
+                            scanf("%d", &arr1[i]);
+                        }
+                        printf("Enter Second Array\n");
+                        for (i = 0; i < 5; i++)
+                        {
+                            printf("Enter Value of position %d\n", i+1);
+                            scanf("%d", &arr2[i]);
+                        }
+                    
+                        merge(arr1, 5, arr2, 5, arr, 10);
+                        printf("Printing Merged Array\n");
+                        for (i = 0; i < 10; i++)
+                        {
+                              printf("Value at position %d is %d\n", i+1, arr[i]);
+                        }
+                        return 0; 
+                    }
+            </pre>
+            <h1>output</h1>
+            <pre>Enter First Array
+                Enter Value of position 1
+                2
+                Enter Value of position 2
+                3
+                Enter Value of position 3
+                5
+                Enter Value of position 4
+                6
+                Enter Value of position 5
+                7
+                Enter Second Array
+                Enter Value of position 1
+                1
+                Enter Value of position 2
+                2
+                Enter Value of position 3
+                4
+                Enter Value of position 4
+                7
+                Enter Value of position 5
+                8
+                Printing Merged Array
+                Value at position 1 is 1
+                Value at position 2 is 2
+                Value at position 3 is 2
+                Value at position 4 is 3
+                Value at position 5 is 4
+                Value at position 6 is 5
+                Value at position 7 is 6
+                Value at position 8 is 7
+                Value at position 9 is 7
+                Value at position 10 is 8
+            </pre>                
+</body>
+</html>

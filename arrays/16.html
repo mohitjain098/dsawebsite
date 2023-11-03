@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+                #include &lt;conio.h&gt;
+
+                    void Selectionsort(int arr[], int size){
+                        int temp, i, j;
+                        for (i = 0; i < size; i++)
+                        {
+                            for (j = i+1; j < size; j++)
+                            {
+                                if (arr[i] > arr[j])
+                                {
+                                    temp = arr[i];
+                                    arr[i] = arr[j];
+                                    arr[j] = temp;
+                                }
+                            }
+                            
+                        }
+                    }
+                    
+                    int main(){
+                        int arr[10],arr2[10], i;
+                        printf("Enter Elements of First Array\n");
+                        for (i = 0; i < 10; i++)
+                        {
+                            printf("Enter Value of position %d\n", i+1);
+                            scanf("%d", &arr[i]);
+                        }
+                        printf("Enter Elements of Second Array\n");
+                        for (i = 0; i < 10; i++)
+                        {
+                            printf("Enter Value of position %d\n", i+1);
+                            scanf("%d", &arr2[i]);
+                        }
+                        
+                        Selectionsort(arr, 10);
+                        Selectionsort(arr2, 10);
+                    
+                        for (i = 0; i < 10; i++)
+                        {
+                            if (arr[i] != arr2[i])
+                            {
+                                printf("Both arrays are not same");
+                                break;
+                            }  
+                        }
+                        if (i == 10)
+                        {
+                            printf("Both arrays are same");
+                        }
+                        
+                    
+                        return 0;
+                    }
+            </pre>
+            <h1>output</h1>
+            <pre>Enter Elements of First Array
+                Enter Value of position 1
+                1
+                Enter Value of position 2
+                2
+                Enter Value of position 3
+                3
+                Enter Value of position 4
+                4
+                Enter Value of position 5
+                5
+                Enter Value of position 6
+                5
+                Enter Value of position 7
+                
+                6
+                Enter Value of position 8
+                7
+                Enter Value of position 9
+                8
+                Enter Value of position 10
+                9
+                Enter Elements of Second Array
+                Enter Value of position 1
+                1
+                2Enter Value of position 2
+                3
+                Enter Value of position 3
+                4
+                Enter Value of position 4
+                5
+                Enter Value of position 5
+                6
+                Enter Value of position 6
+                7
+                Enter Value of position 7
+                8
+                Enter Value of position 8
+                2
+                Enter Value of position 9
+                6
+                Enter Value of position 10
+                2
+                Both arrays are not same</pre>
+</body>
+</html>

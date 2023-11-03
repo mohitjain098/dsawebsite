@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+                int main(){
+                    int i,value,a,j,number;
+                    int arr[5];clrscr();
+                    printf("Enter the values :");
+                    for(i=0;i<4;i++)
+                    {
+                    scanf("%d",&arr[i]);
+                    }
+                    for(i=0;i<4;i++)
+                    {
+                    if(arr[i]>arr[i+1])
+                    {
+                           a= arr[i];arr[i]=arr[i+1];
+                           arr[i+1]=a;
+                    }
+                    }
+                    for(i=0;i<4;i++)
+                    {
+                        for(j=i+1;j<4;j++)
+                        {if(arr[i]>arr[j])
+                        {a=arr[i];
+                        arr[i]=arr[j];
+                        arr[j]=a;}
+                        }
+                    }
+                    printf("\n");
+                    printf("enter the kth smallest value:\n");
+                    scanf("%d",&value);
+                    printf("%d smallest value is %d",value,arr[value]);
+                    getch();
+                    return 0;
+                    }
+            </pre>
+            <h1>output</h1>
+            <pre>
+                Enter the values :
+              1 2 3 4 5
+              enter the kth smallest value:
+              3
+              3 smallest value is 3
+            </pre>
+</body>
+</html>

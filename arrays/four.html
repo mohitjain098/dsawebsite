@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+            int main()
+            {
+                int i;
+                int arr[7], crr[7];
+                clrscr();
+                printf("Enter the values of first array:\n");
+                for(i=0;i&lt;=6;i++)
+                {
+                scanf("%d",&arr[i]);
+                crr[i]=arr[i];
+                }
+                printf("Values of second array in reverse order are:\n");
+                for(i=7-1;i>=0;i--)
+                {
+                printf("%d\n",crr[i]);
+                }
+                getch();
+                
+                return 0;
+            }
+    </pre>
+    <h1>output</h1>
+    <pre>
+        Enter the values of first array:
+        1 2 3 4 5 6 
+        Values of second array in reverse order are:
+        6 5 4 3 2 1
+    </pre>
+    
+</body>
+</html>

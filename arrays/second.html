@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+        #include &lt;conio.h&gt;
+
+            
+            int main() {
+                int i;
+                int arr[6];clrscr();
+                printf("enter the 6 integer values:\n");
+                for(i=0;i<6;i++)
+                {
+                scanf("%d",&arr[i]);
+                }
+            
+                printf("values in reverse order\n:");
+                for(i=6-1;i>=0;i--)
+                {
+                printf("%d\n",arr[i]);}
+                getch();
+                return 0;
+            }
+    </pre>
+    <h1>Output</h1>
+    <pre>
+        enter the 6 integer:
+        1 2 3 4 5 6
+        
+        values in reverse order:
+        6 5 4 3 2 1 
+    </pre>
+</body>
+</html>

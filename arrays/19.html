@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+                
+
+                    int main(){
+                        int arr[5], i;
+                        for (i = 0; i < 5; i++)
+                        {
+                            printf("Enter Value of position %d\n", i+1);
+                            scanf("%d", &arr[i]);
+                        }
+                        
+                        for (i = 1; i < 4; i++)
+                        {
+                            if(arr[i] > arr[i-1] && arr[i] > arr[i+1])
+                                printf("%d is local maxima\n", arr[i]);
+                        }
+                            
+                        return 0;
+                    }
+            </pre>
+            <h1>output</h1>
+            <pre>Enter Value of position 1
+                43
+                Enter Value of position 2
+                76
+                Enter Value of position 3
+                100
+                Enter Value of position 4
+                23
+                Enter Value of position 5
+                100
+                100 is local maxima
+            </pre>         
+</body>
+</html>
