@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+                
+
+                    char* strrevcpy(char dest[], char src[]){
+                        int i = 0, j = 0;
+                        while(src[j] != '\0')
+                            j++;
+                        
+                        while(src[i] != '\0'){
+                            dest[i++] = src[--j];
+                        } 
+                        dest[i] = src[i]; 
+                        return dest;
+                    }
+                    
+                    int main(){
+                        char str[30], copiedstr[30];
+                        printf("Enter String\n");
+                        gets(str);
+                        // strrevcpy(copiedstr, str);
+                        printf("Copied String is %s\n", strrevcpy(copiedstr, str));
+                        return 0;
+                    }
+            </pre>
+            <h1>output</h1>
+            <pre>Enter String
+                this is a sentence
+                Copied String is ecnetnes a si siht</pre>
+                
+</body>
+</html>

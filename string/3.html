@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+                
+
+                    char* strSentence(char str[]){
+                        int i;
+                        for (i = 0; str[i] != '\0'; i++){
+                            if( (i==0) && (str[i]>='a' && str[i]&lt;='z')){
+                                str[i] -= 32;
+                            }
+                            else if(str[i]=='.')
+                            {
+                                if(str[i+1] == ' ')
+                                {
+                                    if(str[i+2]>='a' && str[i+2]&lt;='z')
+                                    {
+                                        str[i+2] -= 32;
+                                    }
+                                }
+                                else
+                                {         
+                                    if(str[i+1]>='a' && str[i+1]&lt;='z')
+                                    {
+                                        str[i+1] -= 32;
+                                    }
+                                }
+                            }
+                        }
+                        return str;
+                    }
+                    
+                    int main(){
+                        char str[30];
+                        printf("Enter a String\n");
+                        gets(str);
+                        printf("String Before Sentence Case: %s\n", str);
+                        strSentence(str);
+                        printf("String After Sentence Case: %s\n", str);
+                        return 0;
+                    }
+            </pre>
+            <h1>output</h1>
+            <pre>Enter a String
+                mohit
+                String Before Sentence Case: mohit
+                String After Sentence Case: Mohit</pre>
+                
+</body>
+</html>

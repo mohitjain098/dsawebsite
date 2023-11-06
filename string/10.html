@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+               
+
+                    int main() {
+                        char inputString[100];
+                        int index;
+                    
+                        printf("Enter a string: ");
+                        fgets(inputString, sizeof(inputString), stdin);
+                    
+                        printf("Enter the index number: ");
+                        scanf("%d", &index);
+                    
+                        // Check if the index is valid
+                        if (index >= 0 && index &lt; strlen(inputString)) {
+                            printf("Character at index %d: %c\n", index, inputString[index]);
+                        } else {
+                            printf("Invalid index or out of range.\n");
+                        }
+                    
+                        return 0;
+                    }
+                    
+            </pre>
+            <h1>output</h1>
+            <pre>Enter a string: this is mohit
+                Enter the index number: 1
+                Character at index 1: h
+                </pre>
+                
+</body>
+</html>
