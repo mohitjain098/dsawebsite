@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+               
+
+                    int findMax(int arr[], int n) {
+                        
+                        if (n == 1) {
+                            return arr[0];
+                        }
+                    
+                        int maxOfRest = findMax(arr, n - 1);
+                    
+                        
+                        return (maxOfRest > arr[n - 1]) ? maxOfRest : arr[n - 1];
+                    }
+                    
+                    int main() {
+                        int array[] = {10, 25, 8, 30, 17};
+                        int size = sizeof(array) / sizeof(array[0]);
+                    
+                        int max = findMax(array, size);
+                        printf("The largest element in the array is: %d\n", max);
+                    
+                        return 0;
+                    }
+                    
+            </pre>
+            <h1>output</h1>
+            <pre>The largest element in the array is: 30</pre>
+                
+</body>
+</html>

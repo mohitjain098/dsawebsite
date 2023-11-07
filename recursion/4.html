@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+                
+
+                    // Function to convert a number to its binary equivalent using recursion
+                    void decimalToBinary(int n) {
+                        if (n > 1) {
+                            decimalToBinary(n / 2);
+                        }
+                        printf("%d", n % 2);
+                    }
+                    
+                    int main() {
+                        int number;
+                    
+                        printf("Enter a number to convert to binary: ");
+                        scanf("%d", &number);
+                    
+                        if (number &lt; 0) {
+                            printf("Please enter a non-negative number.\n");
+                        } else {
+                            printf("Binary equivalent: ");
+                            if (number == 0) {
+                                printf("0");
+                            } else {
+                                decimalToBinary(number);
+                            }
+                            printf("\n");
+                        }
+                    
+                        return 0;
+                    }
+                    
+            </pre>
+            <h1>output</h1>
+            <pre>Enter a number to convert to binary: 3
+                Binary equivalent: 11</pre>
+                
+</body>
+</html>

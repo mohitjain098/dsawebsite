@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+        #include &lt;stdio.h&gt;
+              
+
+                    double arrayMean(int arr[], int n) {
+                        if (n &lt;= 0) {
+                            return 0.0; // Base case: if the array is empty or all elements are processed
+                        }
+                        // Recursive case: sum up elements and divide by count
+                        return (arr[n - 1] + (n - 1) * arrayMean(arr, n - 1)) / n;
+                    }
+                    
+                    int main() {
+                        int array[] = {5, 10, 15, 20, 25};
+                        int size = sizeof(array) / sizeof(array[0]);
+                    
+                        double mean = arrayMean(array, size);
+                        printf("The arithmetic mean of the array is: %.2f\n", mean);
+                    
+                        return 0;
+                    }
+                    
+            </pre>
+            <h1>output</h1>
+            <pre>The arithmetic mean of the array is: 15.00</pre>
+                
+</body>
+</html>
